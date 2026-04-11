@@ -1,0 +1,303 @@
+/* ===========================
+   HONDA DIGITAL CARD – styles.css
+   =========================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f0f0f0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 420px;
+  margin: 0 auto;
+  background: #ffffff;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── HERO ── */
+.hero {
+  height: 200px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #cc0000 50%, #990000 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: white;
+  clip-path: ellipse(55% 100% at 50% 100%);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="160" cy="40" r="80" fill="rgba(255,255,255,0.04)"/><circle cx="20" cy="160" r="100" fill="rgba(255,255,255,0.03)"/></svg>') center/cover;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.honda-logo {
+  width: 48px;
+  height: 48px;
+  background: rgba(255,255,255,0.15);
+  border: 2px solid rgba(255,255,255,0.4);
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.brand-name {
+  color: white;
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 6px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+/* ── AVATAR ── */
+.avatar-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: -55px;
+  position: relative;
+  z-index: 10;
+}
+
+.avatar-ring {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 4px solid #cc0000;
+  box-shadow: 0 4px 20px rgba(204,0,0,0.3);
+  overflow: hidden;
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.avatar-fallback {
+  display: none;
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* ── INFO BLOCK ── */
+.info-block {
+  text-align: center;
+  padding: 16px 20px 8px;
+}
+
+.info-block h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: 0.5px;
+}
+
+.role {
+  color: #cc0000;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 4px;
+}
+
+.brand-tag {
+  color: #888;
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+/* ── DIVIDER ── */
+.divider {
+  display: flex;
+  align-items: center;
+  padding: 12px 30px;
+}
+
+.divider span {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #cc0000, transparent);
+}
+
+/* ── SOCIAL GRID ── */
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 0 20px 20px;
+}
+
+.social-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 8px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.social-btn:active {
+  transform: scale(0.95);
+}
+
+.social-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+.social-btn.whatsapp  { background: #25D366; }
+.social-btn.facebook  { background: #1877F2; }
+.social-btn.location  { background: #cc0000; }
+.social-btn.contact   { background: #1a1a1a; }
+
+/* ── CTA SECTION ── */
+.cta-section {
+  padding: 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 15px;
+  background: #cc0000;
+  color: white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-primary:active {
+  background: #aa0000;
+  transform: scale(0.98);
+}
+
+.btn-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px;
+  background: transparent;
+  color: #1a1a1a;
+  border: 2px solid #1a1a1a;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-secondary:active {
+  background: #1a1a1a;
+  color: white;
+}
+
+/* ── DESC SECTION ── */
+.desc-section {
+  padding: 10px 24px 24px;
+}
+
+.desc-text {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.7;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.highlight-bar {
+  display: flex;
+  justify-content: space-around;
+  background: #f8f8f8;
+  border-radius: 16px;
+  padding: 16px 10px;
+  margin-bottom: 24px;
+  border: 1px solid #eee;
+}
+
+.highlight-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #444;
+  font-weight: 600;
+  text-align: center;
+}
+
+.highlight-icon {
+  font-size: 20px;
+}
+
+.desc-section h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+/* ── FOOTER ── */
+.footer {
+  background: #1a1a1a;
+  padding: 16px;
+  text-align: center;
+}
+
+.footer p {
+  color: #888;
+  font-size: 11px;
+  letter-spacing: 1px;
+}

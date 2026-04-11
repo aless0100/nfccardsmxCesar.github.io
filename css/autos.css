@@ -1,0 +1,236 @@
+/* ===========================
+   HONDA VEHICLES – autos.css
+   =========================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f0f0f0;
+  min-height: 100vh;
+}
+
+/* ── PAGE HEADER ── */
+.page-header {
+  height: 120px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #cc0000 60%, #880000 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.page-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: #f0f0f0;
+  clip-path: ellipse(55% 100% at 50% 100%);
+}
+
+.header-overlay {
+  position: absolute;
+  inset: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 120"><circle cx="250" cy="20" r="80" fill="rgba(255,255,255,0.04)"/></svg>') center/cover;
+}
+
+.header-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.header-brand {
+  color: white;
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: 8px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  display: block;
+}
+
+.header-sub {
+  color: rgba(255,255,255,0.75);
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+/* ── CONTAINER ── */
+.container {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 20px 16px 10px;
+}
+
+/* ── CARD ── */
+.card {
+  background: white;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  position: relative;
+  border: 1px solid #eee;
+}
+
+.card-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #1a1a1a;
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.card-badge.badge-hybrid {
+  background: #1a6b1a;
+}
+
+.card-badge.badge-premium {
+  background: #cc0000;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  background: #f9f9f9;
+  display: block;
+  padding: 10px;
+}
+
+/* ── CARD BODY ── */
+.card-body {
+  padding: 16px 18px 18px;
+}
+
+.card-body h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.price {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+.price strong {
+  color: #cc0000;
+  font-size: 16px;
+}
+
+.tagline {
+  font-size: 12px;
+  color: #777;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* ── SPECS MINI ── */
+.specs-mini {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.specs-mini span {
+  background: #f4f4f4;
+  color: #444;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid #e8e8e8;
+}
+
+/* ── CARD ACTIONS ── */
+.card-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.btn-ver,
+.btn-wa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 11px 8px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn-ver:active,
+.btn-wa:active {
+  opacity: 0.85;
+  transform: scale(0.97);
+}
+
+.btn-ver {
+  background: #1a1a1a;
+  color: white;
+}
+
+.btn-wa {
+  background: #25D366;
+  color: white;
+}
+
+/* ── BACK BUTTON ── */
+.back-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px;
+  margin: 10px 0 24px;
+  border: 2px solid #1a1a1a;
+  border-radius: 50px;
+  color: #1a1a1a;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.back-btn:active {
+  background: #1a1a1a;
+  color: white;
+}
+
+/* ── PAGE FOOTER ── */
+.page-footer {
+  background: #1a1a1a;
+  padding: 16px;
+  text-align: center;
+}
+
+.page-footer p {
+  color: #888;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
